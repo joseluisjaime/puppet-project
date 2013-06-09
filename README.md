@@ -1,4 +1,5 @@
 puppet-project
 ==============
 
-Project with puppet
+Project with puppet!
+
