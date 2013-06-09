@@ -1,4 +1,4 @@
-class prueba {
+class prueba2 {
 file { "/root/ficherofunciona":
 owner => root,
 group => root,
