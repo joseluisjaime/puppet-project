@@ -6,7 +6,7 @@ class snmp {
     ensure => installed,
   }
 
-  file {'/etc/snmp/snmp.conf':
+  file {'/etc/snmp/snmpd.conf':
     ensure => file,
     owner => root,
     group => root,
