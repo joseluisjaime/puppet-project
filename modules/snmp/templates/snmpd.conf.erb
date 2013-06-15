@@ -1,6 +1,6 @@
-<% $syscontact = 'Jose <jose@jose.com>' -%>
-<% $community = 'puppet' -%>
-<% $server = '127.0.0.1' -%>
+<% $syscontact = scope.lookupvar('snmp::params::syscontact') -%>
+<% $community = scope.lookupvar('snmp::params::community') -%>
+<% $server = scope.lookupvar('snmp::params::server') -%>
 
 syscontact <%= $syscontact %>
 
