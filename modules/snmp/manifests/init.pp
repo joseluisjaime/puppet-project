@@ -1,21 +1,29 @@
 class snmp {
 
-  Package['snmpd'] -> File['/etc/snmp/snmpd.conf'] ~> Service['snmpd']
+  Package['snmp'] -> File['snmpd.conf'] ~> Service['snmp']
+
+  $package = 'snmpd'
+  $configfile = '/etc/snmp/snmpd.conf'
+  $service = 'snmpd'
   
-  package { 'snmpd':
+  package { 'snmp':
     ensure => installed,
+    name => "${package}",
   }
 
-  file {'/etc/snmp/snmpd.conf':
+  file {'snmpd.conf':
     ensure => file,
     owner => root,
     group => root,
     mode => 0444,
-    source => 'puppet:///modules/snmp/snmpd.conf'
+    #source => 'puppet:///modules/snmp/snmpd.conf'
+    content => template('snmp/snmpd.conf.erb'),
+    path => "${configfile}"
   }
 
-  service { 'snmpd':
+  service { 'snmp':
     ensure => running,
+    name => "${service}"
   }
 
 }
