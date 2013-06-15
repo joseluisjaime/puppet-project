@@ -1,6 +1,6 @@
-<% $syscontact = scope.lookupvar('snmp::params::syscontact') -%>
-<% $community = scope.lookupvar('snmp::params::community') -%>
-<% $server = scope.lookupvar('snmp::params::server') -%>
+<% $syscontact = scope.lookupvar('snmp::syscontact') -%>
+<% $community = scope.lookupvar('snmp::community') -%>
+<% $server = scope.lookupvar('snmp::server') -%>
 
 syscontact <%= $syscontact %>
 

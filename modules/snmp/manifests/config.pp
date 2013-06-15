@@ -6,7 +6,7 @@ class snmp::config {
     group => root,
     mode => 0444,
     content => template('snmp/snmpd.conf.erb'),
-    path => "${snmp::params::configfile}",
+    path => "${snmp::configfile}",
     }
   
 

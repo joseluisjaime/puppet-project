@@ -1,8 +1,17 @@
-class snmp {
+class snmp (
 
-  Class['snmp::params'] -> Class['snmp::install'] -> Class['snmp::config'] ~> Class['snmp::service']
+  $package = 'snmpd',
+  $configfile = '/etc/snmp/snmpd.conf',
+  $service = 'snmpd',
+  $community = 'puppet',
+  $syscontact = 'joseluis <jose@gmail.com>',
+  $server = '127.0.0.1',
   
-  include snmp::params
+
+)  {
+
+  Class['snmp::install'] -> Class['snmp::config'] ~> Class['snmp::service']
+  
   include snmp::install
   include snmp::config
   include snmp::service

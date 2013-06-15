@@ -2,7 +2,7 @@ class snmp::install {
 
   package { 'snmp':
     ensure => installed,
-    name => "${snmp::params::package}",
+    name => "${snmp::package}",
     }
 
 }
