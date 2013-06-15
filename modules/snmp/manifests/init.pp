@@ -1,4 +1,6 @@
 class snmp {
+
+  Package['snmpd'] -> File['/etc/snmp/snmpd.conf'] ~> Service['snmpd']
   
   package { 'snmpd':
     ensure => installed,
