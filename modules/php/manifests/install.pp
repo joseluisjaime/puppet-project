@@ -1,6 +1,6 @@
 class php::install {
 
-  package['php'] -> package['php_mysql']
+  Package['php'] -> Package['php_mysql']
   
   package { 'php':
     ensure => installed,
