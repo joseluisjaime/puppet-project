@@ -1,8 +1,12 @@
-class prueba {
+class prueba (
+
+  $nombre = 'joseluis'
+
+)  {
 file { "/root/ficherodeprueba":
 owner => root,
 group => root,
 mode => 400,
-source => "puppet:///modules/prueba/ficherodeprueba",
+content => template('prueba/prueba.erb'),
 }
 }
