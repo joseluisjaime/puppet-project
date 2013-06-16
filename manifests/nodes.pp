@@ -1,5 +1,8 @@
 node ejemplo {
-include prueba
+class{'prueba':
+  $nombre = 'pepe'
+  }
+  
 }
 node 'client.example.com' inherits ejemplo {
 }
