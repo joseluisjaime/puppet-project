@@ -2,10 +2,10 @@ class php::config {
 
   file {'phpinfo':
     ensure => file,
-    owner =>
-    group =>
-    mode =>
+    owner => www-data,
+    group => www-data,
+    mode => 0644,
     source => 'puppet:///modules/php/info.php',
-    path => "${php::phpinfo}"
+    path => "${php::phpinfo}",
     }
 }
