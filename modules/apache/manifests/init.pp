@@ -5,6 +5,7 @@ class apache (
   $apache_service = 'apache2',
   $machinename = $hostname,
   $machineip = $ipaddress,
+  $osname = $operatingsystem,
   
 ) {
 
