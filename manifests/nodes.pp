@@ -1,6 +1,7 @@
 node ejemplo {
+  
 class{'prueba':
-  $nombre => 'pepe'
+  nombre => 'pepe'
   }
   
 }
