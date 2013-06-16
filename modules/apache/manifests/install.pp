@@ -2,7 +2,7 @@ class apache::install {
 
   package { 'apache':
     ensure => installed,
-    name => "${apache::apachepackage}",
+    name => "${apache::apache_package}",
   }
   
 }
