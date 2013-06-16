@@ -7,5 +7,5 @@ class php::config {
     mode =>
     source => 'puppet:///modules/php/info.php',
     path => "${php::phpinfo}"
-
+    }
 }
