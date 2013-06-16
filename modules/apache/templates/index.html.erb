@@ -1,10 +1,11 @@
 <% $machinename =  scope.lookupvar('apache::machinename') -%>
 <% $machineip =  scope.lookupvar('apache::machineip') -%>
+<% $osname = $operatingsystem -%>
 <html>
 <body>
 <h1>Apache funciona correctamente</h1>
 <p>Nombre de la maquina: <%= $machinename %></p>
 <p>Ip de la maquina: <%= $machineip %></p>
-<p>Sistema operativo: <%= $operatingsystem %></p>
+<p>Sistema operativo: <%= $osname %></p>
 </body>
 </html>
