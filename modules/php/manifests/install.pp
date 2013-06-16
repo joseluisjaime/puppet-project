@@ -9,5 +9,7 @@ class php::install {
 
   package { 'php_mysql':
     ensure => installed,
-    name => "${php::php_mysql_package}", 
+    name => "${php::php_mysql_package}",
+  }
+  
 }
