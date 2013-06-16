@@ -1,8 +1,8 @@
 class apache (
 
-  $package = 'apache2',
+  $apache_package = 'apache2',
   $indexhtml = '/var/www/index.html',
-  $service = 'apache2',
+  $apache_service = 'apache2',
   $machinename = $hostname,
   $machineip = $ipaddress,
   
