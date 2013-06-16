@@ -1,9 +1,5 @@
 node ejemplo {
-  
-class{'prueba':
-  nombre => 'pepe'
-  }
-  
+class{'prueba':}
 }
 node 'client.example.com' inherits ejemplo {
 }
