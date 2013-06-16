@@ -1,10 +1,7 @@
-node ejemplo {
-class{'prueba':
-
-  nombre => 'josesobre',
-  }
+node default {
 }
-node 'client.example.com' inherits ejemplo {
+node 'client.example.com' inherits default {
+  class {'apache':}
 }
-node 'client2.example.com' inherits ejemplo {
+node 'client2.example.com' inherits default {
 }
