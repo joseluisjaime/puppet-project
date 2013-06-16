@@ -3,7 +3,7 @@ class snmp (
   $package = 'snmpd',
   $configfile = '/etc/snmp/snmpd.conf',
   $service = 'snmpd',
-  $community = 'puppet',
+  $community = hiera('rocommunity'),
   $syscontact = 'joseluis <jose@gmail.com>',
   $server = '127.0.0.1',
   
