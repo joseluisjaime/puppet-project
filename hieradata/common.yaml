@@ -1,0 +1,9 @@
+---
+
+snmp::package: 'snmpd'
+snmp::configfile: '/etc/snmp/snmpd.conf'
+snmp::service: 'snmpd'
+
+snmp::community: 'puppethiera'
+snmp::server: '127.0.0.1'
+snmp::syscontact: 'josehiera <jose@gmail.com>'
