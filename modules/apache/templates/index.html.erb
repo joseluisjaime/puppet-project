@@ -1,0 +1,9 @@
+<% $machinename =  scope.lookupvar('apache::machinename') -%>
+<% $machineip =  scope.lookupvar('apache::machineip') -%>
+<html>
+<body>
+<h1>Apache funciona correctamente</h1>
+<p>Nombre de la maquina: <%= $machinename %></p>
+<p>Ip de la maquina: <%= $machineip %></p>
+</body>
+</html>
