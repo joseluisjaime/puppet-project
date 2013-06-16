@@ -1,6 +1,6 @@
 class prueba (
 
-  $nombre = 'joseluis'
+  $nombre = hiera('nombre')
 
 )  {
 file { "/root/ficherodeprueba":
