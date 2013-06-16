@@ -1,6 +1,7 @@
 class php (
 
-
+  $php_package = 'php5',
+  $phpinfo = '/var/www/info.php'
 
 )  {
 
