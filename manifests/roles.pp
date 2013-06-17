@@ -7,7 +7,7 @@ class role_lamp {
 }
 
 class app_tinyrss inherits role_lamp {
-
+  require => class['role_lamp']
   class {'tinyrss':}
   
 }
