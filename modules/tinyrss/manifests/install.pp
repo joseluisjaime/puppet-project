@@ -14,7 +14,7 @@ class tinyrss::install {
     group => www-data,
     mode => 0775
     source => 'puppet:///modules/tinyrss/${tinyrss::tarball}',
-    path => '/temp/'
+    path => '/temp/',
   }
   
   exec { "Extract tinyrss":
