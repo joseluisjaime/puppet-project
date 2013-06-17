@@ -7,5 +7,13 @@ class role_lamp {
 }
 
 class app_tinyrss {
-  class {'role_lamp':} -> class {'tinyrss':}  
+  stage { 'first': before => Stage['main'] }
+  stage { 'last': require => Stage['main'] }
+  
+  class {'role_lamp':
+    stage => first,
+  }
+  class {'tinyrss':
+    stage => main,
+  }  
 }
