@@ -22,6 +22,6 @@ class tinyrss::install {
     refreshonly => true,
     path => "/bin:/usr/bin",
     unless => "find ${tinyrss::tinyrss_directory}",
-    command => "tar -xzf /tmp/${tinyrss::tarball} --strip=1 -C ${tinyrss::tinyrss_directory}",
+    command => "tar -xzf /tmp/Tiny-Tiny-RSS-1.8.tar.gz --strip=1 -C ${tinyrss::tinyrss_directory}",
   }
 }
