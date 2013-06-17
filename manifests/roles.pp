@@ -7,6 +7,5 @@ class role_lamp {
 }
 
 class app_tinyrss {
-  class {'role_lamp':}
-  class {'tinyrss':}  
+  class {'role_lamp':} -> class {'tinyrss':}  
 }
