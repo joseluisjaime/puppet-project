@@ -9,7 +9,7 @@ class tinyrss::install {
   }
 
   file {'tinyrss_tarball':
-    ensure => file,
+    ensure => present,
     owner => www-data,
     group => www-data,
     mode => 0775,
