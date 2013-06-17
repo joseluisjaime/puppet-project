@@ -5,3 +5,9 @@ class role_lamp {
   class {'php':}
   class {'mysql':}
 }
+
+class app_tinyrss inherits role_lamp {
+
+  class {'tinyrss':}
+  
+}
