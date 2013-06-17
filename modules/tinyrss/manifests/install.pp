@@ -12,7 +12,7 @@ class tinyrss::install {
     ensure => file,
     owner => www-data,
     group => www-data,
-    mode => 0775
+    mode => 0775,
     source => 'puppet:///modules/tinyrss/${tinyrss::tarball}',
     path => '/temp/',
   }
