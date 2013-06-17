@@ -7,5 +7,5 @@ node 'client.example.com' inherits default {
   class {'mysql':}
 }
 node 'client2.example.com' inherits default {
-  include app_tinyrss
+#  include app_tinyrss
 }
