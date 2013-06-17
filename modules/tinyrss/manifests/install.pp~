@@ -1,0 +1,13 @@
+class tinyrss::install {
+
+  file {'tiny_directory':
+    ensure => directory,
+    owner => www-data,
+    group => www-data,
+    mode => 0640,
+    path => "${tinyrss::tiny_directory}",   
+  }
+
+
+
+}
