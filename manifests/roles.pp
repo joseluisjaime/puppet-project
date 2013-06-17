@@ -1,5 +1,9 @@
 class aptupdate {
-  exec { 'apt-get -y update': }
+  exec { 'aptupdate':
+    path => "/bin:/usr/bin",
+    command => "apt-get -y update"
+
+  }
 }
 
 class role_lamp {
