@@ -14,7 +14,7 @@ class tinyrss::install {
     group => www-data,
     mode => 0775,
     source => 'puppet:///modules/tinyrss/Tiny-Tiny-RSS-1.8.tar.gz',
-    path => '/temp/Tiny-Tiny-RSS-1.8.tar.gz',
+    path => '/tmp/Tiny-Tiny-RSS-1.8.tar.gz',
   }
   
   exec { "Extract tinyrss":
