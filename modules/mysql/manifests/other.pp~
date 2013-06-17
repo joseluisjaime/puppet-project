@@ -1,0 +1,12 @@
+class mysql::other {
+  
+  exec { “Set MySQL server root password”:
+    subscribe => [ Package["mysql-server"]],
+    refreshonly => true,
+    unless => 
+    path => "/bin:/usr/bin",
+    command => ,
+  }
+
+
+}
