@@ -1,6 +1,9 @@
 node default {
 }
 class lamp {
+
+  Class['apache'] -> Class['php'] -> Class['mysql']
+  
   class {'apache':}
   class {'php':}
   class {'mysql':}  
