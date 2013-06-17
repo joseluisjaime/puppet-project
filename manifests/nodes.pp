@@ -9,4 +9,7 @@ node 'client2.example.com' inherits default {
   class {'apache':}
   class {'php':}
   class {'mysql':}
+
+  Class['apache'] -> Class['php'] -> Class['mysql']
+  
 }
