@@ -6,10 +6,11 @@ class role_lamp {
   class {'mysql':}
 }
 
-class app_tinyrss inherits role_lamp {
+class app_tinyrss {
 
-  class {'tinyrss':
-    require => Class['role_lamp'],
-  }
+  Class['role_lamp'] -> Class['tinyrss']
+
+  class {'role_lamp':}
+  class {'tinyrss':}
   
 }
