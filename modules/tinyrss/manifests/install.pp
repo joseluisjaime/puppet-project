@@ -9,7 +9,7 @@ class tinyrss::install {
   }
 
   exec { "Extract tinyrss":
-    subscribe => [ File['tinyrss_directory']],
+#    subscribe => [ File['tinyrss_directory']],
     refreshonly => true,
     unless => "ls ${tinyrss::tinyrss_directory}",
     path => "/bin",
