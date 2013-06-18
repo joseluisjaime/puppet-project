@@ -1,8 +1,8 @@
 class aptupdate {
   exec { 'aptupdate':
     path => "/bin:/usr/bin",
-    command => "apt-get -y update"
-#    timeout => 1800,
+    command => "apt-get -y update",
+    timeout => 600,
   }
 }
 
