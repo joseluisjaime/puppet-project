@@ -10,8 +10,10 @@ class tinyrss (
   
 )  {
 
-  include tinyrss::install
+  Class['tinyrss::install'] -> Class['tinyrss::config']
 
+  include tinyrss::install
+  include tinyrss::config
 
 
 }
