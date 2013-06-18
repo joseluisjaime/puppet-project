@@ -24,13 +24,6 @@ class tinyrss::install {
     command => "tar -xzf /tmp/Tiny-Tiny-RSS-1.8.tar.gz --strip=1 -C ${tinyrss::tinyrss_directory}",
   }
 
-  exec { "Extract tinyrss":
-    subscribe => [ File['tinyrss_directory']],
-    path => "/bin:/usr/bin",
-    unless => "find ${tinyrss::tinyrss_directory}/themes",
-    command => "tar -xzf /tmp/Tiny-Tiny-RSS-1.8.tar.gz --strip=1 -C ${tinyrss::tinyrss_directory}",
-  }
-
     exec { "Create tinyrss database":
 #    subscribe => [ Exec["Extract tinyrss"]],
     path => "/bin:/usr/bin",
