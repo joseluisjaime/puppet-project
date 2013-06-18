@@ -24,12 +24,7 @@ class role_lamp {
 }
 
 class app_tinyrss {
-  stage { 'update': before => Stage['first'] }
   stage { 'first': before => Stage['main'] }
-
-  class {'aptupdate':
-    stage => update,
-  }
   
   class {'role_lamp':
     stage => first,
