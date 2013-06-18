@@ -6,8 +6,8 @@ or other application using the libvirt API.
 -->
 
 <domain type='kvm'>
-  <name>base</name>
-  <uuid>682a7fb2-4737-6b6b-94a3-810a95e4bc40</uuid>
+  <name>@@NAME@@</name>
+  <uuid>@@UUID@@</uuid>
   <memory>524288</memory>
   <currentMemory>524288</currentMemory>
   <vcpu>1</vcpu>
@@ -28,7 +28,7 @@ or other application using the libvirt API.
     <emulator>/usr/bin/kvm</emulator>
     <disk type='file' device='disk'>
       <driver name='qemu' type='qcow2'/>
-      <source file='/media/linux/imagen/base.img'/>
+      <source file='/media/linux/imagen/@@NAME@@.img'/>
       <target dev='vda' bus='virtio'/>
       <address type='pci' domain='0x0000' bus='0x00' slot='0x05' function='0x0'/>
     </disk>
@@ -42,7 +42,7 @@ or other application using the libvirt API.
       <address type='pci' domain='0x0000' bus='0x00' slot='0x01' function='0x1'/>
     </controller>
     <interface type='network'>
-      <mac address='52:54:00:1c:0b:2f'/>
+      <mac address='@@MAC@@'/>
       <source network='default'/>
       <model type='virtio'/>
       <address type='pci' domain='0x0000' bus='0x00' slot='0x03' function='0x0'/>

@@ -1,6 +1,7 @@
 node 'client.example.com' {
-  include role_lamp
+  include app_tinyrss
+  
 }
 node 'client2.example.com' {
-  include role_lamp
+  include app_tinyrss
 }
