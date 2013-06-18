@@ -5,7 +5,8 @@ class tinyrss (
   $tinyrss_user = 'tinyrss_user',
   $tinyrss_password = 'tinytinyrss',
   $mysql_root_password = hiera('mysql_root_password'),
-  $tinyrss_database = 'db_tinyrss'
+  $tinyrss_database = 'db_tinyrss',
+  $machineip = $ipaddress
   
 )  {
 
