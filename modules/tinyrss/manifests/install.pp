@@ -27,7 +27,7 @@ class tinyrss::install {
     exec { "Create tinyrss database":
     subscribe => [ Exec["Extract tinyrss"]],
     path => "/bin:/usr/bin",
-    unless => "mysql -u${tinyrss::tinyrss_user} -p${tinyrss::password} ${tinyrss::tinyrss_database}",
+    unless => "mysql -u${tinyrss::tinyrss_user} -p${tinyrss::tinyrss_password} ${tinyrss::tinyrss_database}",
     command => "mysql -uroot -p${tinyrss::mysql_root_password} -e \"create database ${tinyrss::tinyrss_database}; grant all on ${tinyrss::tinyrss_database}.* to ${tinyrss::tinyrss_user}@localhost identified by '${tinyrss::tinyrss_password}';\"",
   }
 
