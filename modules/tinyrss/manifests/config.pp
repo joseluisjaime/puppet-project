@@ -1,4 +1,4 @@
-class tinytss::config {
+class tinyrss::config {
 
 
   file {'tinyrss config file':
