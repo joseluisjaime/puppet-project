@@ -6,7 +6,7 @@ class tinyrss (
   $tinyrss_password = 'tinytinyrss',
   $mysql_root_password = hiera('mysql_root_password'),
   $tinyrss_database = 'db_tinyrss',
-  $machineip = $ipaddress
+  $machineip = $ipaddress,
   
 )  {
 
@@ -14,6 +14,5 @@ class tinyrss (
 
   include tinyrss::install
   include tinyrss::config
-
 
 }

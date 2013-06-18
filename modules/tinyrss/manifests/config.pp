@@ -1,5 +1,5 @@
 class tinyrss::config {
-
+  
 
   file {'tinyrss config file':
     ensure => file,
