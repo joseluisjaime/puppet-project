@@ -2,7 +2,7 @@ class mysql (
 
   $mysql_package = 'mysql-server',
   $mysql_service = 'mysql',
-  $root_password = 'puppet',
+  $mysql_root_password = hiera('mysql_root_password'),
 
 )  {
 
