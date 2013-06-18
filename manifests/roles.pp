@@ -7,7 +7,16 @@ class aptupdate {
 }
 
 class role_lamp {
+
+  stage { 'update': before => Stage['first'] }
+  stage { 'first': before => Stage['main'] }
+
   $role_lamp = hiera('role_lamp')
+
+  class {'aptupdate':
+    stage => update,
+  }
+
   
   class {'apache':}
   class {'php':}
@@ -17,7 +26,6 @@ class role_lamp {
 class app_tinyrss {
   stage { 'update': before => Stage['first'] }
   stage { 'first': before => Stage['main'] }
-  stage { 'last': require => Stage['main'] }
 
   class {'aptupdate':
     stage => update,
