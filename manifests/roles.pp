@@ -8,8 +8,7 @@ class aptupdate {
 
 class role_lamp {
 
-  stage { 'update': before => Stage['first'] }
-  stage { 'first': before => Stage['main'] }
+  stage { 'update': before => Stage['main'] }
 
   $role_lamp = hiera('role_lamp')
 
@@ -17,7 +16,6 @@ class role_lamp {
     stage => update,
   }
 
-  
   class {'apache':}
   class {'php':}
   class {'mysql':}
