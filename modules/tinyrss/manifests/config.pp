@@ -7,6 +7,7 @@ class tinyrss::config {
     group => www-data,
     mode => 0755,
     content => template('tinyrss/config.php.erb'),
+    path => "${tinyrss::tinyrss_directory}"
   }
 
   exec {'set owner and group tinyrss':
