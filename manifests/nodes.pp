@@ -10,7 +10,7 @@ node 'client3.example.com' {
 node 'backend2.example.com' {
   include app_tinyrss
 }
-node 'backend2.example.com' {
+node 'backend3.example.com' {
   include apache
   include php
 }
