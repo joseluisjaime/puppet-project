@@ -14,6 +14,6 @@ node 'backend3.example.com' {
   include apache
   include php
 }
-node 'puppetclient1' {
+node 'puppetclient1.example.com' {
   include prueba
 }
