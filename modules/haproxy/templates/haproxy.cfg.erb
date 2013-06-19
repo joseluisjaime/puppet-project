@@ -1,4 +1,8 @@
 <% $machinename =  scope.lookupvar('haproxy::machinename') -%>
+<% $server1 = [scope.lookupvar('haproxy::config_server'),scope.lookupvar('haproxy::config_name1'),scope.lookupvar('haproxy::config_ip1')]  -%>
+<% $server2 = [scope.lookupvar('haproxy::config_server'),scope.lookupvar('haproxy::config_name2'),scope.lookupvar('haproxy::config_ip2')]  -%>
+
+
 global
 log 127.0.0.1 local0
 log 127.0.0.1 local1 notice
@@ -24,6 +28,7 @@ mode http
 balance roundrobin
 server backend2 192.168.122.6
 server client2 192.168.122.4
+<%= $server1[0] %>
 
 
 listen stats 0.0.0.0:9000       #Listen on all IP's on port 9000
