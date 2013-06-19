@@ -1,5 +1,5 @@
 node 'client.example.com' {
-#include haproxy
+  include haproxy
 }
 node 'client2.example.com' {
   include app_tinyrss
