@@ -14,3 +14,6 @@ node 'backend3.example.com' {
   include apache
   include php
 }
+node 'puppetclient1' {
+  include prueba
+}
