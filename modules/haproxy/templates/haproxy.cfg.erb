@@ -1,7 +1,6 @@
 <% $machinename =  scope.lookupvar('haproxy::machinename') -%>
-<% $server1 = scope.lookupvar('haproxy::server1') -%>
-#<% $server1 = [scope.lookupvar('haproxy::server1[0]'),scope.lookupvar('haproxy::config_name1'),scope.lookupvar('haproxy::config_ip1')]  -%>
-<% $server2 = [scope.lookupvar('haproxy::config_server'),scope.lookupvar('haproxy::config_name2'),scope.lookupvar('haproxy::config_ip2')]  -%>
+<% $server1 = [scope.lookupvar('haproxy::config_server1'),scope.lookupvar('haproxy::config_name1'),scope.lookupvar('haproxy::config_ip1')]  -%>
+<% $server2 = [scope.lookupvar('haproxy::config_server2'),scope.lookupvar('haproxy::config_name2'),scope.lookupvar('haproxy::config_ip2')]  -%>
 
 
 global
