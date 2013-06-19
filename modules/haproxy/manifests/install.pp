@@ -7,5 +7,5 @@ class haproxy::install {
     mode => 0775,
     source => 'puppet:///modules/haproxy/${haproxy::haproxy_tarball}',
     path => '/tmp/${haproxy::haproxy_tarball}',
-
+  }
 }
