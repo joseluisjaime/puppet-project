@@ -38,14 +38,9 @@ class haproxy::config {
     content => template('haproxy/haproxy.cfg.erb'),
   }
 
-  group {'haproxy':
-    ensure => present,
-  }
   
   user {'haproxy':
     ensure => present,
-    group => haproxy,
-    membership => minimun,
   }
 
 }
