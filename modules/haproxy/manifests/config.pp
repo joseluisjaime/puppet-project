@@ -1,6 +1,6 @@
 class haproxy::config {
 
-  File['haproxy init.d'] ->  File['haproxy default'] ->  File['haproxy config directory'] ->  File['haproxy config']
+  File['haproxy init.d'] ->  File['haproxy default'] ->  File['haproxy config directory'] ->  File['haproxy config'] -> Group['haproxy'] -> User['haproxy']
 
   file {'haproxy init.d':
     ensure => file,
@@ -38,6 +38,10 @@ class haproxy::config {
     content => template('haproxy/haproxy.cfg.erb'),
   }
 
+  group {'haproxy':
+    ensure => present,
+  }
+  
   user {'haproxy':
     ensure => present,
     groups => haproxy,
