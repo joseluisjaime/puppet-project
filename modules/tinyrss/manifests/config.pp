@@ -1,7 +1,5 @@
 class tinyrss::config {
 
-#  File['tinyrss config file'] -> Exec['Populate tinyrss database'] -> Exec['set owner and group tinyrss']
-
   file {'tinyrss config file':
     ensure => file,
     owner => www-data,
