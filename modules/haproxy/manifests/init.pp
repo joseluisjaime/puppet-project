@@ -2,7 +2,7 @@ class haproxy (
   
   $haproxy_tarball = 'haproxy-1.4.24.tar.gz',
   $machinename = $hostname,
-  $server1 = ['serveras','','']
+  $server1 = ['serveras','',''],
   $config_server = 'server',
   $config_name1 = '',
   $config_name2 = '',
