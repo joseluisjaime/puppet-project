@@ -13,7 +13,7 @@ class haproxy::install {
 
   exec {"Extract haproxy":
     path => "/bin:/usr/bin",
-    subscribe => [ File['haproxy_tarball']],
+#    subscribe => [ File['haproxy_tarball']],
     unless => "find /opt/haproxy-1.4.24/doc",
     command => "tar -xzf /opt/haproxy-1.4.24.tar.gz",
   }
