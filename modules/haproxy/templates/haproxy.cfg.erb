@@ -29,7 +29,7 @@ mode http
 balance roundrobin
 server backend2 192.168.122.6
 server client2 192.168.122.4
-<%= $server1[0] %>
+<%= $server1 %>
 
 
 listen stats 0.0.0.0:9000       #Listen on all IP's on port 9000
