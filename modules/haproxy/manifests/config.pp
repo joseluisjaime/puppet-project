@@ -1,6 +1,6 @@
 class haproxy::config {
 
-  File['haproxy init.d'] ->  File['haproxy default'] ->  File['haproxy config directory'] ->  File['haproxy config'] -> Group['haproxy'] -> User['haproxy']
+  File['haproxy init.d'] ->  File['haproxy default'] ->  File['haproxy config directory'] ->  File['haproxy config'] -> User['haproxy']
 
   file {'haproxy init.d':
     ensure => file,
