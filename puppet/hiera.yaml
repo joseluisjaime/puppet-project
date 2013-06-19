@@ -1,0 +1,8 @@
+---
+:hierarchy:
+    - common
+    - haproxy
+:backends:
+    - yaml
+:yaml:
+    :datadir: '/usr/share/puppet/puppet-project/hieradata'
