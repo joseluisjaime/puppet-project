@@ -44,7 +44,8 @@ class haproxy::config {
   
   user {'haproxy':
     ensure => present,
-    groups => haproxy,
+    group => haproxy,
+    membership => minimun,
   }
 
 }
