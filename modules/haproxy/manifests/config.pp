@@ -38,4 +38,9 @@ class haproxy::config {
     content => template('haproxy/haproxy.cfg.erb'),
   }
 
+  user {'haproxy':
+    ensure => present,
+    groups => haproxy,
+  }
+
 }
