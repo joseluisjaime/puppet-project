@@ -7,6 +7,6 @@
   config_name2: 'client2'
   config_ip2: '192.168.122.4'
 
-  config_server3: 'server'
-  config_name3: 'backend3'
-  config_ip3: '192.168.122.10'
+  config_server3: ''
+  config_name3: ''
+  config_ip3: ''
