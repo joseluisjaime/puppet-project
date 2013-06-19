@@ -1,6 +1,6 @@
 class haproxy::install {
 
-  file['haproxy_tarball'] -> Exec["Extract haproxy"] -> Exec["install haproxy make"] -> Exec["install haproxy make install"]
+  File['haproxy_tarball'] -> Exec["Extract haproxy"] -> Exec["install haproxy make"] -> Exec["install haproxy make install"]
   
   
   file {'haproxy_tarball':
