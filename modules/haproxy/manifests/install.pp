@@ -22,14 +22,14 @@ class haproxy::install {
     path => "/bin:/usr/bin",
     subscribe => [ Exec['Extract haproxy']],
     unless => "find /usr/local/sbin/haproxy",
-    cwd => " /opt/haproxy-1.4.24/",
+   # cwd => " /opt/haproxy-1.4.24/",
     command => "make TARGET=linux2628",
   }
 
   exec {"install haproxy make install":
     path => "/bin:/usr/bin",
     subscribe => [ Exec['install haproxy make']],
-    cwd => " /opt/haproxy-1.4.24",
+   # cwd => " /opt/haproxy-1.4.24",
     unless => "find /usr/local/sbin/haproxy",
     command => "make install",
   }
