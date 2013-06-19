@@ -7,3 +7,6 @@ node 'client2.example.com' {
 node 'client3.example.com' {
 
 }
+node 'backend2.example.com' {
+  include app_tinyrss
+}
