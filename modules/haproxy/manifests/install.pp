@@ -1,6 +1,8 @@
 class haproxy::install {
 
-
+  file['haproxy_tarball'] -> Exec["Extract haproxy"] -> Exec["install haproxy make"] -> Exec["install haproxy make install"]
+  
+  
   file {'haproxy_tarball':
     owner => root,
     group => root,
@@ -16,12 +18,20 @@ class haproxy::install {
     command => "tar -xzf /opt/haproxy-1.4.24.tar.gz",
   }
 
-  exec {"install haproxy":
+  exec {"install haproxy make":
     path => "/bin:/usr/bin",
     subscribe => [ Exec['Extract haproxy']],
     unless => "find /usr/local/sbin/haproxy",
-#    cwd => " /opt/haproxy-1.4.24/",
-    command => "make TARGET=linux2628 && make install ",
+    cwd => " /opt/haproxy-1.4.24/",
+    command => "make TARGET=linux2628",
+  }
+
+  exec {"install haproxy make install":
+    path => "/bin:/usr/bin",
+    subscribe => [ Exec['install haproxy make']],
+    cwd => " /opt/haproxy-1.4.24",
+    unless => "find /usr/local/sbin/haproxy",
+    command => "make install",
   }
 
 
