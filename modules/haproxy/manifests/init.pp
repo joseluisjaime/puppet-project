@@ -1,7 +1,8 @@
 class haproxy (
-
+  
   $haproxy_tarball = 'haproxy-1.4.24.tar.gz',
-
+  $machinename = $hostname,
+  
 )  {
 
 
