@@ -3,6 +3,7 @@
 NAME=$1
 IP=$2
 
+ssh root@192.168.122.2 "puppet cert clean $NAME.example.com"
 virt-clone --connect qemu:///system --original base --name $NAME --file /media/linux/imagen/$NAME.img
 virsh start $NAME
 sleep 15

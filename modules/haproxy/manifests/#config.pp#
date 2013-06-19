@@ -1,0 +1,12 @@
+class haproxy::config {
+
+  file {'haproxy init.d':
+    ensure => file,
+    owner =>
+    
+
+  }
+
+
+
+}
