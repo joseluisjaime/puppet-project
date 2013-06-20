@@ -18,7 +18,7 @@ class tinyrss::config {
   
   exec {'set owner and group tinyrss':
     subscribe => [ Exec["Populate tinyrss database"] ],
-    #    refreshonly => true,
+    refreshonly => true,
     path => "/bin:/usr/bin",
     command => "chown -R www-data:www-data ${tinyrss::tinyrss_directory}"
   }
