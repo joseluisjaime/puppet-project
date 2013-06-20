@@ -2,7 +2,7 @@ node 'client.example.com' {
   include haproxy
 }
 node 'client2.example.com' {
-
+  include apache
 }
 node 'client3.example.com' {
 
