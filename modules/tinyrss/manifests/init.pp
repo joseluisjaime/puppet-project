@@ -1,11 +1,11 @@
 class tinyrss (
 
-  $tinyrss_directory = '/var/www/tinytinyrss',
-  $tarball = 'Tiny-Tiny-RSS-1.8.tar.gz',
-  $tinyrss_user = 'tinyrss_user',
-  $tinyrss_password = 'tinytinyrss',
+  $tinyrss_directory = hiera('tinyrss_directory'),
+  $tinyrss_tarball = hiera('tinyrss_tarball'),
+  $tinyrss_user = hiera('tinyrss_user'),
+  $tinyrss_password = hiera('tinyrss_password'),
   $mysql_root_password = hiera('mysql_root_password'),
-  $tinyrss_database = 'db_tinyrss',
+  $tinyrss_database = hiera('tinyrss_database'),
   $machineip = $ipaddress,
   
 )  {

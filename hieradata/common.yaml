@@ -13,3 +13,8 @@ mysql_root_password: 'puppet'
 mysql_package: 'mysql-server'
 mysql_service: 'mysql'
 
+tinyrss_directory: '/var/www/tinytinyrss'
+tinyrss_tarball: 'Tiny-Tiny-RSS-1.8.tar.gz'
+tinyrss_user: 'tinyrss_user'
+tinyrss_password: 'tinytinyrss'
+tinyrss_database: 'db_tinyrss'
