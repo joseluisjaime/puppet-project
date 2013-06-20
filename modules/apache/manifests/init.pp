@@ -1,8 +1,8 @@
 class apache (
 
-  $apache_package = 'apache2',
-  $indexhtml = '/var/www/index.html',
-  $apache_service = 'apache2',
+  $apache_package = hiera('apache_package'),
+  $indexhtml = hiera('indexhtml'),
+  $apache_service = hiera('apache_service'),
   $machinename = $hostname,
   $machineip = $ipaddress,
   $osname = $operatingsystem,
