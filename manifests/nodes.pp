@@ -17,15 +17,3 @@ node 'backend3.example.com' {
 node 'puppetclient1.example.com' {
   include prueba
 }
-node 'balanaux.example.com' {
-  include apache
-  include php
-}
-node 'balanaux.example.com' {
-  include apache
-  include php
-}
-node 'balanaux.example.com' {
-  include apache
-  include php
-}
