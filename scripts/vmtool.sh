@@ -5,7 +5,9 @@ IP=$2
 BALANCEADOR=$3
 NODE='/home/jose/puppet-project/manifests/nodes.pp'
 HIERA_HAPROXY='/home/jose/puppet-project/hieradata/haproxy.yaml'
-UPDATE_SCIPT='/home/jose/puppet-project/scripts/update.sh'
+UPDATE_SCRIPT='/home/jose/puppet-project/scripts/update.sh'
+
+ssh root@192.168.122.2 "puppet cert clean $NAME.example.com"
 
 if [ $BALANCEADOR = 1 ]; then
 
@@ -22,7 +24,7 @@ if [ $BALANCEADOR = 1 ]; then
     
 fi
 
-ssh root@192.168.122.2 "puppet cert clean $NAME.example.com"
+
 virt-clone --connect qemu:///system --original base --name $NAME --file /media/linux/imagen/$NAME.img
 virsh start $NAME
 sleep 15
