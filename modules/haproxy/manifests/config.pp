@@ -7,7 +7,7 @@ class haproxy::config {
     owner => root,
     group => root,
     mode => 0755,
-    path => '/etc/init.d/haproxy',
+    path => "/etc/init.d/${haproxy::haproxy_service}",
     source => 'puppet:///modules/haproxy/haproxy-initd'
   }
 

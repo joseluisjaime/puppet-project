@@ -1,6 +1,8 @@
 class haproxy (
   
   $haproxy_tarball = hiera('haproxy_tarball'),
+  $haproxy_version = hiera('haproxy_version'),
+  $haproxy_service = hiera('haproxy_service'),
   $haproxy_socat_package = hiera('haproxy_socat_package'),
   $machinename = $hostname,
 

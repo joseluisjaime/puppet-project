@@ -1,6 +1,8 @@
 ---
 
   haproxy_tarball: 'haproxy-1.4.24.tar.gz'
+  haproxy_version: 'haproxy-1.4.24'
+  haproxy_service: 'haproxy'
   haproxy_socat_package: 'socat'
 
   config_server1: 'server'
