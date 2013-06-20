@@ -10,8 +10,6 @@ class role_lamp {
 
   stage { 'update': before => Stage['main'] }
 
-  $role_lamp = hiera('role_lamp')
-
   class {'aptupdate':
     stage => update,
   }

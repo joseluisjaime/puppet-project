@@ -1,3 +1,8 @@
 ---
-role_lamp: 'lamp'
+
 mysql_root_password: 'puppet'
+
+
+apache_package: 'apache2'
+indexhtml: '/var/www/index.html'
+apache_service: 'apache2'
