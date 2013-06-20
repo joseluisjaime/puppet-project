@@ -2,10 +2,7 @@ node 'client.example.com' {
   include haproxy
 }
 node 'client2.example.com' {
-  include apache
-  include php
-  include mysql
-  include tinyrss
+
 }
 node 'client3.example.com' {
 
