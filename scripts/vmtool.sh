@@ -35,7 +35,7 @@ ssh root@192.168.122.122 "echo 'report=true' >> /etc/puppet/puppet.conf"
 ssh root@192.168.122.122 "sed -i 's/192.168.122.122/192.168.122.$IP/g' /etc/network/interfaces"
 ssh root@192.168.122.122 "sed -i 's/START=no/START=yes/g' /etc/default/puppet"
 ssh root@192.168.122.122 "reboot"
-sleep 25
+sleep 26
 ssh root@192.168.122.2 "puppet cert --sign $NAME.example.com"
 sleep 2
 ssh root@192.168.122.$IP "puppet agent -t"
