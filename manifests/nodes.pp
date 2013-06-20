@@ -11,3 +11,7 @@ node 'client3.example.com' {
 node 'prueba1.example.com' {
   include app_tinyrss
 }
+node 'balanaux.example.com' {
+  include apache
+  include php
+}
