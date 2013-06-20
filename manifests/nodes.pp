@@ -4,6 +4,7 @@ node 'client.example.com' {
 node 'client2.example.com' {
   include apache
   include php
+  include mysql
 }
 node 'client3.example.com' {
 
