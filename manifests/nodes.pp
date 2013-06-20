@@ -17,5 +17,5 @@ node 'puppetclient1.example.com' {
 
 }
 node 'prueba1.example.com' {
-  include apache
+  include role_lamp
 }
