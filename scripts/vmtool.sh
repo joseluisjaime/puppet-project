@@ -36,4 +36,5 @@ ssh root@192.168.122.122 "sed -i 's/START=no/START=yes/g' /etc/default/puppet"
 ssh root@192.168.122.122 "reboot"
 sleep 20
 ssh root@192.168.122.2 "puppet cert --sign $NAME.example.com"
-#ssh root@192.168.122.$IP "puppet agent -t"
+sleep 2
+ssh root@192.168.122.$IP "puppet agent -t"
