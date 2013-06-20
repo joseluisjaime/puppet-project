@@ -1,6 +1,7 @@
 class haproxy (
   
-  $haproxy_tarball = 'haproxy-1.4.24.tar.gz',
+  $haproxy_tarball = hiera('haproxy_tarball'),
+  $haproxy_socat_tarball = hiera('haproxy_socat_tarball'),
   $machinename = $hostname,
 
   $config_server1 = hiera('config_server1'),

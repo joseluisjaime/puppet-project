@@ -1,4 +1,8 @@
 ---
+
+  haproxy_tarball: 'haproxy-1.4.24.tar.gz'
+  haproxy_socat_package: 'socat'
+
   config_server1: 'server'
   config_name1: 'backend2'
   config_ip1: '192.168.122.6'

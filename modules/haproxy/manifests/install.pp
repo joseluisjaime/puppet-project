@@ -1,7 +1,14 @@
 class haproxy::install {
 
-  File['haproxy_tarball'] -> Exec["Extract haproxy"] -> Exec["install haproxy make"] -> Exec["install haproxy make install"]
+  Package['socat'] -> File['haproxy_tarball'] -> Exec["Extract haproxy"] -> Exec["install haproxy make"] -> Exec["install haproxy make install"]
   
+
+  package {'socat':
+    ensure => installed,
+    name => "${haproxy::haproxy_socat_package}",
+  }
+
+
   
   file {'haproxy_tarball':
     owner => root,
