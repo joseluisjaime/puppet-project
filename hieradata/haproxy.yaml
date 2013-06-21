@@ -10,8 +10,8 @@
   config_ip1: '192.168.122.4'
 
   config_server2: 'server'
-  config_name2: 'prueba1'
-  config_ip2: '192.168.122.10'
+  config_name2: 'node1'
+  config_ip2: '192.168.122.30'
 
   config_server3: ''
   config_name3: ''
