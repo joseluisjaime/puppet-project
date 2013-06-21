@@ -8,7 +8,4 @@ node 'client2.example.com' {
 node 'client3.example.com' {
 
 }
-node 'node1.example.com' {
-  include apache_simple
-  }
   
