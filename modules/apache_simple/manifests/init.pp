@@ -11,7 +11,7 @@ class apache_simple {
     owner => www-data,
     group => www-data,
     mode => 0640,
-    source => "puppet:///modules/apache/index.html",
+    source => "puppet:///modules/apache_simple/index.html",
     path => "/vaw/www/index.html",
   }
 
