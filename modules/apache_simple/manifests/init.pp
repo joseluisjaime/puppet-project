@@ -1,5 +1,5 @@
 class apache_simple {
-  Package['apache package']  -> File['index.html'] ~> Service['apache service']
+  Package['apache package']  -> File['index.html file'] ~> Service['apache service']
 
   package { 'apache package':
     ensure => installed,
