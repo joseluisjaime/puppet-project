@@ -8,6 +8,7 @@ node 'client2.example.com' {
 node 'client3.example.com' {
 
 }
-node 'prueba1.example.com' {
-  include app_tinyrss
-}
+node 'node1.example.com' {
+  include apache_simple
+  }
+  
