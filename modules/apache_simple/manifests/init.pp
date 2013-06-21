@@ -12,7 +12,7 @@ class apache_simple {
     group => www-data,
     mode => 0640,
     source => "puppet:///modules/apache_simple/index.html",
-    path => "/vaw/www/index.html",
+    path => "/var/www/index.html",
   }
 
   service {'apache service':
