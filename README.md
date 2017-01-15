@@ -21,4 +21,6 @@ forma automática cuando se llegue a un numero de peticiones concurrentes.
 Por ultimo vemos como instalar y configurar un dashboard o herramienta
 web para monitorizar puppet de forma gráfica pudiendo comprobar el
 estado de los nodos, los cambios realizados, fallos etc..
+
+
 PDF: https://es.scribd.com/doc/171840817/Puppet-Joseluisjaime
